@@ -68,8 +68,8 @@ You will need:
 Clone the repository:
 
 ```bash
-git clone <repository-url>
-cd milo
+git clone https://github.com/MurcielLang/Milo
+cd Milo
 ```
 
 Install dependencies:
