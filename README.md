@@ -8,25 +8,25 @@ Milo is a Discord bot built with TypeScript and Node.js. The project is focused 
 
 Milo currently focuses on the fundamental features of a Discord bot:
 
-* Discord Gateway connection
-* Slash commands
-* Command handling
-* Event handling
-* Basic utility commands
-* Basic moderation commands
-* Error handling
-* Logging
+- Discord Gateway connection
+- Slash commands
+- Command handling
+- Event handling
+- Basic utility commands
+- Basic moderation commands
+- Error handling
+- Logging
 
 More features may be added in the future.
 
 ## Tech Stack
 
-* [TypeScript](https://www.typescriptlang.org/)
-* [Node.js](https://nodejs.org/)
-* [discord.js](https://discord.js.org/)
-* npm
-* Git
-* GitHub
+- [TypeScript](https://www.typescriptlang.org/)
+- [Node.js](https://nodejs.org/)
+- [discord.js](https://discord.js.org/)
+- npm
+- Git
+- GitHub
 
 ## 📁 Project Structure
 
@@ -58,10 +58,10 @@ milo/
 
 You will need:
 
-* Node.js
-* npm
-* A Discord account
-* A Discord application and bot created through the Discord Developer Portal
+- Node.js
+- npm
+- A Discord account
+- A Discord application and bot created through the Discord Developer Portal
 
 ### Installation
 
@@ -156,16 +156,16 @@ Milo is also a learning project.
 
 The main goals are to gain practical experience with:
 
-* Backend architecture
-* Node.js
-* TypeScript
-* APIs
-* Event-driven applications
-* Environment configuration
-* Error handling
-* Testing
-* Git and GitHub
-* Software project structure
+- Backend architecture
+- Node.js
+- TypeScript
+- APIs
+- Event-driven applications
+- Environment configuration
+- Error handling
+- Testing
+- Git and GitHub
+- Software project structure
 
 ## License
 
