@@ -15,8 +15,7 @@ client.login(process.env.DISCORD_TOKEN);
 client.on(Events.InteractionCreate, async (interaction) => {
   if (!interaction.isChatInputCommand()) return;
 
-  if (interaction.commandName === "ping") {
+  if (interaction.commandName === 'ping') {
     await pingCommandHandler(interaction);
   }
-
-})
+});
