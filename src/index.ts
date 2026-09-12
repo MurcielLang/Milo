@@ -1,21 +1,29 @@
 import 'dotenv/config';
-import { Client, Events, GatewayIntentBits } from 'discord.js';
-import { pingCommandHandler } from './commands/utility/ping';
+import { Client, Collection, Events, GatewayIntentBits } from 'discord.js';
+
+import { pingCommand } from './commands/utility/ping';
+import { commandType } from './types/command';
 
 const client = new Client({
   intents: [GatewayIntentBits.Guilds],
 });
 
-client.once('clientReady', () => {
+const commands = new Collection<string, commandType>();
+
+commands.set(pingCommand.data.name, pingCommand);
+
+client.once(Events.ClientReady, () => {
   console.log(`Logged in as ${client.user?.tag}!`);
 });
-
-client.login(process.env.DISCORD_TOKEN);
 
 client.on(Events.InteractionCreate, async (interaction) => {
   if (!interaction.isChatInputCommand()) return;
 
-  if (interaction.commandName === 'ping') {
-    await pingCommandHandler(interaction);
-  }
+  const command = commands.get(interaction.commandName);
+
+  if (!command) return;
+
+  await command.execute(interaction);
 });
+
+client.login(process.env.DISCORD_TOKEN);
