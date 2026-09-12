@@ -1,16 +1,13 @@
 import 'dotenv/config';
-import { Client, Collection, Events, GatewayIntentBits } from 'discord.js';
+import { Client, Events, GatewayIntentBits } from 'discord.js';
+import { helpCommand } from './commands/utility/help';
+import { commands } from './utils/commands';
 
-import { pingCommand } from './commands/utility/ping';
-import { commandType } from './types/command';
+commands.set(helpCommand.data.name, helpCommand);
 
 const client = new Client({
   intents: [GatewayIntentBits.Guilds],
 });
-
-const commands = new Collection<string, commandType>();
-
-commands.set(pingCommand.data.name, pingCommand);
 
 client.once(Events.ClientReady, () => {
   console.log(`Logged in as ${client.user?.tag}!`);
