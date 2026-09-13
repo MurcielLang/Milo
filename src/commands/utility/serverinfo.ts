@@ -6,6 +6,22 @@ export const serverInfo: commandType ={
 
     async execute(interaction: ChatInputCommandInteraction) {
         const guild = interaction.guild;
-        console.log(guild?.name);
+        
+        if (!guild){
+            await interaction.reply("This command can only be used on a server");
+            return;
+        }
+        
+        const owner = await guild.fetchOwner();
+
+        const serverinfo = [
+            `**${guild.name}**`,
+            "",
+            `🆔 ID: \`${guild.id}\``,
+            `👑 Owner: ${owner.user.tag}`,
+            `👥 Members: ${guild.memberCount}`,
+            `📅 Created: <t:${Math.floor(guild.createdTimestamp / 1000)}:D>`,].join("\n");
+        
+            await interaction.reply(serverinfo)
     },
 };
