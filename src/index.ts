@@ -1,9 +1,11 @@
 import 'dotenv/config';
 import { Client, Events, GatewayIntentBits } from 'discord.js';
 import { helpCommand } from './commands/utility/help';
+import { serverInfo } from './commands/utility/serverinfo';
 import { commands } from './utils/commands';
 
 commands.set(helpCommand.data.name, helpCommand);
+commands.set(serverInfo.data.name, serverInfo);
 
 const client = new Client({
   intents: [GatewayIntentBits.Guilds],

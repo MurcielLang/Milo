@@ -7,4 +7,5 @@ export const pingCommand: commandType = {
   async execute(interaction: ChatInputCommandInteraction) {
     await interaction.reply('Pong!');
   },
+  
 };
