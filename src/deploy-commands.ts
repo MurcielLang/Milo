@@ -4,12 +4,14 @@ import { pingCommand } from './commands/utility/ping';
 import { helpCommand } from './commands/utility/help';
 import { serverInfoCommand } from './commands/utility/serverinfo';
 import { userInfoCommand } from './commands/utility/userInfo';
+import { avatarCommand } from './commands/utility/avatar';
 
 const commands = [
   pingCommand.data.toJSON(),
   helpCommand.data.toJSON(),
   serverInfoCommand.data.toJSON(),
   userInfoCommand.data.toJSON(),
+  avatarCommand.data.toJSON(),
 ];
 
 const rest = new REST({ version: '10' }).setToken(process.env.DISCORD_TOKEN!);

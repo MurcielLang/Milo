@@ -3,11 +3,13 @@ import { Client, Events, GatewayIntentBits } from 'discord.js';
 import { helpCommand } from './commands/utility/help';
 import { serverInfoCommand } from './commands/utility/serverinfo';
 import { userInfoCommand } from './commands/utility/userInfo';
+import { avatarCommand } from './commands/utility/avatar';
 import { commands } from './utils/commands';
 
 commands.set(helpCommand.data.name, helpCommand);
 commands.set(serverInfoCommand.data.name, serverInfoCommand);
 commands.set(userInfoCommand.data.name, userInfoCommand);
+commands.set(avatarCommand.data.name, avatarCommand);
 
 const client = new Client({
   intents: [GatewayIntentBits.Guilds],
