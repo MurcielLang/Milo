@@ -2,7 +2,7 @@ import { ChatInputCommandInteraction, SlashCommandBuilder, version } from 'disco
 import { commandType } from '../../types/command';
 
 export const botInfoCommand: commandType = {
-  data: new SlashCommandBuilder().setName('botinfo').setDescription('Shows information Milo'),
+  data: new SlashCommandBuilder().setName('botinfo').setDescription('Shows information about Milo'),
 
   async execute(interaction: ChatInputCommandInteraction) {
     const client = interaction.client;
