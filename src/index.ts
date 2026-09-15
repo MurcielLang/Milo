@@ -6,6 +6,7 @@ import { userInfoCommand } from './commands/utility/userInfo';
 import { avatarCommand } from './commands/utility/avatar';
 import { botInfoCommand } from './commands/utility/botInfo';
 import { uptimeCommand } from './commands/utility/uptime';
+import { kickCommand } from './commands/moderation/kick';
 import { commands } from './utils/commands';
 
 commands.set(helpCommand.data.name, helpCommand);
@@ -14,6 +15,7 @@ commands.set(userInfoCommand.data.name, userInfoCommand);
 commands.set(avatarCommand.data.name, avatarCommand);
 commands.set(botInfoCommand.data.name, botInfoCommand);
 commands.set(uptimeCommand.data.name, uptimeCommand);
+commands.set(kickCommand.data.name, kickCommand);
 
 const client = new Client({
   intents: [GatewayIntentBits.Guilds],
