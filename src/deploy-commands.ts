@@ -9,6 +9,7 @@ import { botInfoCommand } from './commands/utility/botInfo';
 import { uptimeCommand } from './commands/utility/uptime';
 import { kickCommand } from './commands/moderation/kick';
 import { banCommand } from './commands/moderation/ban';
+import { unbanCommand } from './commands/moderation/unban';
 
 const commands = [
   pingCommand.data.toJSON(),
@@ -20,6 +21,7 @@ const commands = [
   uptimeCommand.data.toJSON(),
   kickCommand.data.toJSON(),
   banCommand.data.toJSON(),
+  unbanCommand.data.toJSON(),
 ];
 
 const rest = new REST({ version: '10' }).setToken(process.env.DISCORD_TOKEN!);

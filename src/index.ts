@@ -8,6 +8,7 @@ import { botInfoCommand } from './commands/utility/botInfo';
 import { uptimeCommand } from './commands/utility/uptime';
 import { kickCommand } from './commands/moderation/kick';
 import { banCommand } from './commands/moderation/ban';
+import { unbanCommand } from './commands/moderation/unban';
 import { commands } from './utils/commands';
 
 commands.set(helpCommand.data.name, helpCommand);
@@ -18,6 +19,7 @@ commands.set(botInfoCommand.data.name, botInfoCommand);
 commands.set(uptimeCommand.data.name, uptimeCommand);
 commands.set(kickCommand.data.name, kickCommand);
 commands.set(banCommand.data.name, banCommand);
+commands.set(unbanCommand.data.name, unbanCommand);
 
 const client = new Client({
   intents: [GatewayIntentBits.Guilds],
